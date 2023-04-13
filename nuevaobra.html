@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/coloreshome.css">
+    <link rel="stylesheet" href="CSS/formulario.css">
+    <title>Nueva Obra</title>
+    <script src="https://kit.fontawesome.com/da025f3c34.js" crossorigin="anonymous"></script>
+    <script src="JS/perfil.js"></script>
+    <script src="JS/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <br>
+            <img src="IMG/logo.png"  width="100" height="100">
+            <br>
+            <br>
+            <br>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="home.html#blog">Galeria</a>
+                <a href="login.html">Login</a>
+                <a href="perfil.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+    <section id="formulario">
+             
+        <form action="" method="post">
+                <h2>Agregar Nueva Obra</h2>
+            <div class="contenedor-input">
+                <input   class="col-p" placeholder="Ingrese Nombre Obra" type="text" name="txtNombreO" id=""required>
+                <input class="col-p" placeholder="Ingrese su Nombre" type="text" name="txtNombre" id="">
+                <textarea class="col-g" placeholder="Ingrese descripcion" name="txtDescr"></textarea>
+                <input class="col-p" placeholder="Ingrese Valor Obra" type="number" name="txtValor" id="">
+                <input class="col-p" type="date" name="datFecha" id="datFecha">
+                <div class="add-new-photo first" id="add-photo">
+                    <span><i class="icon-camera"></i></span>
+                </div>
+                <input type="file" multiple id="add-new-photo" name="images[]">
+
+                <input class="col-p" type="submit" value="Enviar" onclick="confirmarEnvio(this)">
+                <input class="col-p" type="reset" value="Limpiar">
+            </div>
+        </form>
+
+    </section>
+</body>

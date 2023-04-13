@@ -1,0 +1,106 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Zero</title>
+    <link rel="stylesheet" href="CSS/registro.css">
+</head>
+<html>
+	<header>
+        <div class="container">
+            <br>
+            <img src="IMG/logo.png"  width="100" height="100">
+            <br>
+            <br>
+            <nav>
+                <a href="Index.html">Inicio</a>
+                <a href="galeria.html">Galería</a>
+                <a href="login.html">Login</a>
+				
+            </nav>
+        </div>
+    </header>
+	<head>
+		<div class="linear-gradient">
+			<br>
+			<center><title>Formulario de Registro</title>
+		<script>
+			function validarFormulario() {
+				var nombre = document.forms["registro"]["nombre"].value;
+				var apellido = document.forms["registro"]["apellido"].value;
+				var fechaNacimiento = document.forms["registro"]["fecha_nacimiento"].value;
+				var correo = document.forms["registro"]["correo"].value;
+				var usuario = document.forms["registro"]["usuario"].value;
+				var contrasena = document.forms["registro"]["contrasena"].value;
+	
+				if (nombre.length < 3) {
+					alert("El nombre debe tener al menos 3 caracteres.");
+					return false;
+				}
+				if (apellido.length < 3) {
+					alert("El apellido debe tener al menos 3 caracteres.");
+					return false;
+				}
+				if (fechaNacimiento == "") {
+					alert("Por favor ingrese su fecha de nacimiento.");
+					return false;
+				}
+				if (correo == "") {
+					alert("Por favor ingrese su correo electrónico.");
+					return false;
+				}
+				if (!correo.includes("@") || !correo.includes(".")) {
+					alert("Por favor ingrese un correo electrónico válido.");
+					return false;
+				}
+				if (usuario.length < 3) {
+					alert("El usuario debe tener al menos 3 caracteres.");
+					return false;
+				}
+				if (contrasena.length < 8) {
+					alert("La contraseña debe tener al menos 8 caracteres.");
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Formulario de Registro</h1>
+		
+		<form name="registro" onsubmit="return validarFormulario()" method="post">
+			<label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" name="nombre" required><br><br>
+	
+			<label for="apellido">Apellido:</label>
+			<input type="text" id="apellido" name="apellido" required><br><br>
+	
+			<label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+			<input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+	
+			<label for="correo">Correo Electrónico:</label>
+			<input type="email" id="correo" name="correo" required><br><br>
+	
+			<label for="usuario">Usuario:</label>
+			<input type="text" id="usuario" name="usuario" minlength="3" required><br><br>
+	
+			<label for="contrasena">Contraseña:</label>
+			<input type="password" id="contrasena" name="contrasena" minlength="8" required><br><br>
+	
+			<input type="submit" value="Enviar">
+		</form>
+		</div></center>
+	</body>
+	<footer>
+		<center><div class="container">
+            <ul>
+                <li>📞 Contacto: +56996703241</li>
+                <li>Direccion Avenida Faltaguita 349, Región Metropolitana.</li>
+                <p>&copy; Grupo Zero - Galeria de arte</p>
+            </ul>
+        </div></center>
+    </footer
+</html>
